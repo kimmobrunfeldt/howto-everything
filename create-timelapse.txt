@@ -1,18 +1,9 @@
 Create timelapse
 ================
 
-ImageMagick
------------
+If you want to add timestamp to your video use: https://github.com/kimmobrunfeldt/pieces/blob/master/burn-timestamp.py
 
-Install
-
-    brew install imagemagick
-
-Run
-
-    convert -limit thread 10 -delay 8 -quality 100 *.png outvideo.avi
-
-convert was built without OpenMP feature. I built ImageMagick with OpenMP support by installing newer version of gcc with brew. The newer version had OpenMP support.
+After you have the set of new timestamped images, create timelapse.
 
 Mencoder(MPlayer)
 -----------------
@@ -30,7 +21,20 @@ http://ubuntuforums.org/showthread.php?t=1850196
 
     FPS=8
     # Create raw video from images with H.264 codec
-    mencoder "mf://*.png" -mf fps=$FPS -vf scale=1440:-1 -ovc x264 -x264encopts pass=1:bitrate=6000:crf=20:preset=veryslow -nosound -ofps $FPS -noskip -of rawvideo -o rawoutput.264
+    mencoder "mf://*.png" -mf fps=$FPS:type=png -vf scale=1440:-1 -ovc x264 -x264encopts pass=1:bitrate=6000:crf=20:preset=veryslow -nosound -ofps $FPS -of rawvideo -o rawoutput.264
     # Convert raw video to mp4 format
     ffmpeg -f h264 -i rawoutput.264 -r $FPS -vcodec copy muxed.mp4
     rm rawoutput.264
+
+ImageMagick
+-----------
+
+Install
+
+    brew install imagemagick
+
+Run
+
+    convert -limit thread 10 -delay 8 -quality 100 *.png outvideo.avi
+
+convert was built without OpenMP feature. I built ImageMagick with OpenMP by installing newer version of gcc with brew.
