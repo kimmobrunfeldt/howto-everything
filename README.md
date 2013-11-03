@@ -1,4 +1,4 @@
-howto-everything
-================
+How to everything
+=================
 
-Collection of notes and howtos.
+I try to document everything I do. These notes are mostly for myself.
