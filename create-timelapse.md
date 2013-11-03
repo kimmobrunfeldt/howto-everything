@@ -19,6 +19,8 @@ Create Motion picture video(MPNG or MJPEG)
 Encode a HD time-lapse video with H.264 codec and MP4 format
 http://ubuntuforums.org/showthread.php?t=1850196
 
+*Warning: This method caused some jammed frames!*
+
     FPS=60
     # Create raw video from images with H.264 codec
     mencoder "mf://*.png" -mf fps=$FPS -vf scale=1440:-1 -ovc x264 -x264encopts pass=1:bitrate=6000:crf=20:preset=veryslow -nosound -ofps $FPS -of rawvideo -o rawoutput.264
