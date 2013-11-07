@@ -28,6 +28,11 @@ http://ubuntuforums.org/showthread.php?t=1850196
     ffmpeg -f h264 -i rawoutput.264 -r $FPS -vcodec copy muxed.mp4
     rm rawoutput.264
 
+
+To MPEG-4
+
+    mencoder "mf://*.png" -mf w=1440:h=1080:fps=20:type=png -ovc lavc -lavcopts vcodec=mpeg4:mbd=2:trell -oac copy -o output.avi
+
 ImageMagick
 -----------
 
@@ -40,3 +45,4 @@ Run
     convert -limit thread 10 -delay 8 -quality 100 *.png outvideo.avi
 
 convert was built without OpenMP feature. I built ImageMagick with OpenMP by installing newer version of gcc with brew.
+
