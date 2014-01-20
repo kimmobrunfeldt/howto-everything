@@ -25,6 +25,12 @@ And run the following SQL commands
 Give rights to connect from all hosts
 -------------------------------------
 
+You must also create user for localhost and grant privileges for that user.
+
+http://stackoverflow.com/questions/10236000/allow-all-remote-connections-mysql
+
     CREATE USER '{{project}}'@'%';
+    CREATE USER '{{project}}'@'localhost';
     GRANT ALL PRIVILEGES ON {{project}}.* TO '{{project}}'@'%';
+    GRANT ALL PRIVILEGES ON {{project}}.* TO '{{project}}'@'localhost';
     FLUSH privileges;
