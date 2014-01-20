@@ -22,3 +22,9 @@ And run the following SQL commands
         answer TEXT
     );
 
+Give rights to connect from all hosts
+-------------------------------------
+
+    CREATE USER '{{project}}'@'%';
+    GRANT ALL PRIVILEGES ON {{project}}.* TO '{{project}}'@'%';
+    FLUSH privileges;
