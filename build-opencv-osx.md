@@ -1,27 +1,7 @@
 Build OpenCV(+Python support) with Homebrew on OS X
 ===================================================
 
-Download latest sources for OpenCV from http://sourceforge.net/projects/opencvlibrary/
-
-    # pip and Python is needed
-    brew install python
-
-    pip install numpy
-
-    # Fortran compiler is needed to build scipy
-    brew install gfortran
-    pip install scipy
-
-    # Install Cmake to build opencv
-    brew install cmake
-
-    # Go to unpacked opencv sources and run
-    mkdir release
-    cd release
-    cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_NEW_PYTHON_SUPPORT=ON -D BUILD_EXAMPLES=ON ..
-
-    # Then run
-    make -j8
+## With homebrew
 
 The make failed for some reason. But running
 
@@ -44,3 +24,28 @@ Then I had to switch to older opencv version..
     # Unlink the current version and install the specified version
     brew unlink opencv
     brew install opencv
+    
+
+## Building manually
+
+Download latest sources for OpenCV from http://sourceforge.net/projects/opencvlibrary/
+
+    # pip and Python is needed
+    brew install python
+
+    pip install numpy
+
+    # Fortran compiler is needed to build scipy
+    brew install gfortran
+    pip install scipy
+
+    # Install Cmake to build opencv
+    brew install cmake
+
+    # Go to unpacked opencv sources and run
+    mkdir release
+    cd release
+    cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_NEW_PYTHON_SUPPORT=ON -D BUILD_EXAMPLES=ON ..
+
+    # Then run
+    make -j8
