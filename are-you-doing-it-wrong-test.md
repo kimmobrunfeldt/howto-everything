@@ -27,8 +27,8 @@ If you can check everything on this list, congratulations, you are doing it righ
 - [ ] Can you refactor your code without fearing that your app won't work?
 - [ ] Do you have strict conventions about project style(*tab/space, indent, naming)*
     If you don't eventually your code will be a mess of different styles:
-        * Diffs will be polluted by mix of spaces and tabs
-        * Code is hard to read
+    * Diffs will be polluted by mix of spaces and tabs
+    * Code is hard to read
 
 -[ ] Do you know how outdated your project's dependencies are?
     You should have a single meter like: 6/10 of dependencies are outdated
