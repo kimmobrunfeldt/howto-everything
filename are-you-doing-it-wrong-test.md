@@ -3,6 +3,7 @@
 If you can check everything on this list, congratulations, you are doing it right!
 
 ### Joel Test
+
 - [ ] Do you use source control?
 - [ ] Can you make a build in one step?
 - [ ] Do you make daily builds?
@@ -17,6 +18,7 @@ If you can check everything on this list, congratulations, you are doing it righ
 - [ ] Do you do hallway usability testing?
 
 ### My questions
+
 - [ ] Do you have a documentation which tells exactly what your product is?
     You will explain the project to new members anyways, just document what you tell them.
 
@@ -51,4 +53,4 @@ If you can check everything on this list, congratulations, you are doing it righ
 
 - [ ] Do you have deployment scripts in version control?
 - [ ] Do you know how outdated your hosting servers are?
-- [ ] Can you easily replicate testing/staging/production environment locally for testing?
+- [x] Can you easily replicate testing/staging/production environment locally for testing?
