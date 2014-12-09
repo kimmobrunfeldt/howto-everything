@@ -1,4 +1,3 @@
-How to everything
-=================
+# How to everything
 
-I try to document everything I do. These notes are mostly for myself.
+Documenting stuff on the way.
