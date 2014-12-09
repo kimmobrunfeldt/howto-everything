@@ -18,7 +18,7 @@ Short version of: http://stackoverflow.com/questions/18687850/setting-up-node-js
 
 * Install [forever](https://github.com/nodejitsu/forever). Which will keep the node app script running.
 
-* Place `start-nodeapp.sh`, `stop-nodeapp.sh` and `restart-nodeapp.sh` to `/home/web`. Scripts are below. **WARNING:** Running start script twice will spawn two processes! You should always run stop before start.
+* Place `start-nodeapp.sh`, `stop-nodeapp.sh` and `restart-nodeapp.sh` to `/home/web`. Scripts are below. Remember to add correct PATH, otherwise crontab will fail to start forever. **WARNING:** Running start script twice will spawn two processes! You should always run stop before start.
 
 * Setup starting of the node process when server starts
 
@@ -31,6 +31,8 @@ Short version of: http://stackoverflow.com/questions/18687850/setting-up-node-js
 
     And add line: `@reboot bash /home/web/start-nodeapp.sh`
 
+    Debug crontab by looking mails with web user using `mail` command.
+
 **start-nodeapp.sh**
 
 ```bash
@@ -38,6 +40,7 @@ Short version of: http://stackoverflow.com/questions/18687850/setting-up-node-js
 HOME="/home/web"
 DIRECTORY="/home/web/nodeapp"
 export NODE_ENV="production"
+PATH=/usr/local/bin:$PATH
 
 forever start --uid "nodeapp" --minUptime 5000 --spinSleepTime 2000 --fifo --sourceDir $DIRECTORY/dist --workingDir $DIRECTORY/dist --append -l $HOME/nodeapp.forever.log -o $HOME/nodeapp.stdout.log -e $HOME/nodeapp.stderr.log server/app.js
 ```
@@ -46,6 +49,7 @@ forever start --uid "nodeapp" --minUptime 5000 --spinSleepTime 2000 --fifo --sou
 
 ```bash
 #!/bin/bash
+PATH=/usr/local/bin:$PATH
 
 forever stop nodeapp
 ```
@@ -54,6 +58,7 @@ forever stop nodeapp
 
 ```bash
 #!/bin/bash
+PATH=/usr/local/bin:$PATH
 
 forever restartall
 ```
