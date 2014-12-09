@@ -1,0 +1,31 @@
+Find files containing text recursively from current directory
+
+    egrep -lir --include=*.txt "text inside file" .
+
+List tar(.gz) file contents
+
+    tar -tvf file.tar
+    tar -tzvf file.tar.gz
+
+Monitor network in/out traffic with slurm
+
+    sudo apt-get install slurm
+    slurm -i eth0
+
+Bench mark HTTP server with Apache Bench(ab)
+
+    # Bench mark with HTTP basic auth, custom header, 10 concurrent connections, 1000 times. Use IP instead of localhost
+    ab -r -v 4 -A user:pass -H "X-Header: test" -c 10 -n 1000 http://127.0.0.1:3000/status/
+
+Replace all tabs to 4 spaces with expand. Finds all .js files in the current dir and its subdirs
+
+    find . -name '*.js' ! -type d -exec bash -c 'expand -t 4 "$0" > /tmp/e && mv /tmp/e "$0"' {} \;
+
+Loop
+
+    #!/bin/bash
+
+    while true; do
+        ssh "$@"
+        sleep 1
+    done
