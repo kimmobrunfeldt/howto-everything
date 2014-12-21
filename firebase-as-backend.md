@@ -2,7 +2,7 @@
 
 Firebase is convenient backend solution for custom sign up pages or any page which needs to work with simple data. Of course the simplest way to manage forms would be Google Forms or other ready-made solution but sometimes you want to have a completely custom page.
 
-We'll go through an example page where we have a form which can be submitted to server.
+We'll go through an example page where we have a form which can be submitted to server. The final result is really short and setupping everything is fast.
 
 ### Form example
 
