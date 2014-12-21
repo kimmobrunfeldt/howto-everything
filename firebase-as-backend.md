@@ -8,7 +8,7 @@ We'll go through an example page where we have a form which can be submitted to 
 
 First you need to [create a new Firebase app](https://www.firebase.com/how-it-works.html). For this example, I created app called `https://form-example.firebaseio.com`.
 
-Firebase security rules are defined as simple JSON. Let's create rules where users cannot read or modify any existing data except append new key-value pairs to */submissions* location:
+Firebase security rules are defined as simple JSON (with comments). Let's create rules where users cannot read or modify any existing data except append new key-value pairs to */submissions* location:
 
 ```json
 {
