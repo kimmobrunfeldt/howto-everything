@@ -23,6 +23,7 @@ If you can check everything on this list, congratulations, you are doing it righ
 - [ ] **Do you have strict conventions about project style(tab/space, indent, naming)**
 
     If you don't eventually your code will be a mess of different styles:
+    
     * Diffs will be polluted by mix of spaces and tabs
     * Code is hard to read
 
@@ -30,18 +31,9 @@ If you can check everything on this list, congratulations, you are doing it righ
 
     You should have a single meter like: 6/10 of dependencies are outdated
 
-- [ ] **Would you be comfortable to show your code to other team members?**
+- [ ] **Would you be and others in your team comfortable to show code to other team members for reviews?**
 
-    If not, are you coding crap?
-
-- [ ] **Can every member of your team handle rough critic of their code?**
-
-    Everyone should be able to handle comments like:
-
-    * *"Your code looks like shit, because ..."*
-    * *"Your technical choice was bad, because ..."*
-
-    If not, members are afraid to give feedback and code will eventually rotten.
+    If not, you should discuss about the reasons with your team.
 
 #### Web development related
 
