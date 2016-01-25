@@ -61,7 +61,9 @@ The file would have these variables:
 ```bash
 export NODE_ENV=test
 export LOG_LEVEL=silly
-export DATABASE_URL=postgres://booyah:booyah@localhost:5432/booyah
+# Have a separate database for tests, it makes your life easier.
+# You can then run tests aside while running local development server
+export DATABASE_URL=postgres://booyah:booyah@localhost:5432/booyah_test
 ```
 
 but **not** the secret ones.
