@@ -9,6 +9,7 @@ faster and increases security.
 
 * Faster page loads simply because the responding server is closer to you physically
 * If your server dies in the background CDN could still serve cached pages
+* To survive DDoS attacks
 
 ### CloudFlare Pros
 
