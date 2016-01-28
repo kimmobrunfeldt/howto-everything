@@ -45,8 +45,9 @@ faster and more secure.
     [30M in 2013](http://techcrunch.com/2013/12/17/cloudflare-reveals-50m-round-from-union-square-ventures/),
     [110M in 2015](http://techcrunch.com/2015/09/22/cloudflare-locks-down-110m-from-fidelity-microsoft-google-baidu-and-qualcomm/).
     
-    Update: CloudFlare's CEO Matthew Prince [tweeted](https://twitter.com/eastdakota/status/692788281721884672) they've been profitable since the beginning of 2014.
+    Update: CloudFlare's CEO Matthew Prince [tweeted](https://twitter.com/eastdakota/status/692788281721884672) they've been profitable since the beginning of 2014. He also stated 
     
+    > if you can connect directly to ISPs then the variable cost (bandwidth) approaches zero.
 
 * A few reported strange incidents
 
@@ -68,23 +69,14 @@ faster and more secure.
 
 ### My conclusion
 
-A few concerns:
+It's a great service with very reasonable price. They offer a rich set of features compared to other players.
 
-* I'm a bit worried what their real business model is or if they will change it later
+I would be careful when using the small plans if the backing origin server costs could be potentially really high.
+For example if I have traffic 100TB/month and the origin server in S3, I wouldn't
+use the smaller plans(less than "Business $200/month") to make the S3 bill cheaper. 
+There might be nasty surprises if CloudFlare decides to suddenly route
+all that traffic to S3. See the above mentioned "incidents".
 
-    They have been profitable for a good while already but still I don't get how they can have fixed
-    prices for a volume-based product.
-
-* I wouldn't use CloudFlare's small plans if the backing origin server costs could be potentially really high
-
-    For example if I have traffic 100TB/month and the origin server in S3, I wouldn't
-    use the smaller plans(less than "Business $200/month") to make the S3 bill cheaper.
-
-    There might be nasty surprises if CloudFlare decides to suddenly route
-    all that traffic to S3. See the above mentioned "incidents".
-
-But otherwise, I would definitely use it. They offer good set of features with
-a very low price or even free.
 
 ### Alternatives
 
