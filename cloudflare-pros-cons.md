@@ -5,7 +5,7 @@
 # [CloudFlare](https://www.cloudflare.com/)
 
 [CloudFlare](https://www.cloudflare.com/) is a service which makes your website
-faster and increases security.
+faster and more secure. 
 
 ### Why?
 
@@ -15,25 +15,24 @@ faster and increases security.
 
 ### CloudFlare Pros
 
-* They have proved themselves, e.g. reddit.com and stackoverflow.com are customers
+* They have proved themselves in production, e.g. reddit.com and stackoverflow.com are customers
 
     [According to them](https://www.cloudflare.com/customers/), >2M websites are
     routed through CloudFlare
 
-* Nice features: CDN, Analytics, DDoS protection
+* A good set of features: CDN, Analytics, DDoS protection
 
     But be sure to check what plan you need. They have a bit different set of
     [features](https://www.cloudflare.com/plans/).
 
 * It's [very cheap](https://www.cloudflare.com/plans/)
 
-    Used bandwidth doesn't matter, it is a fixed price per month.
+    Used bandwidth doesn't matter, it is a fixed price per month. 
 
 * They provide an [API](https://api.cloudflare.com/)
 
 ### CloudFlare Cons
 
-* Each subdomain is a "new" site.
 * They limit the file size of uploads if you are uploading through CloudFlare.
 
     See "Client maximum upload size" here: https://www.cloudflare.com/plans/#plans-table
@@ -45,6 +44,9 @@ faster and increases security.
     [22M in 2011](http://techcrunch.com/2012/09/03/from-disrupt-runner-up-to-22-million-in-funding-cloudflare-tells-all/),
     [30M in 2013](http://techcrunch.com/2013/12/17/cloudflare-reveals-50m-round-from-union-square-ventures/),
     [110M in 2015](http://techcrunch.com/2015/09/22/cloudflare-locks-down-110m-from-fidelity-microsoft-google-baidu-and-qualcomm/).
+    
+    Update: CloudFlare's CEO Matthew Prince [tweeted](https://twitter.com/eastdakota/status/692788281721884672) they've been profitable since the beginning of 2014.
+    
 
 * A few reported strange incidents
 
@@ -69,6 +71,10 @@ faster and increases security.
 A few concerns:
 
 * I'm a bit worried what their real business model is or if they will change it later
+
+    They have been profitable for a good while already but still I don't get how they can have fixed
+    prices for a volume-based product.
+
 * I wouldn't use CloudFlare's small plans if the backing origin server costs could be potentially really high
 
     For example if I have traffic 100TB/month and the origin server in S3, I wouldn't
