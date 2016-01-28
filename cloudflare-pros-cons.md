@@ -1,6 +1,8 @@
-# [CloudFlare](https://www.cloudflare.com/)
-
 ![CloudFlare logo](img/cloudflare-logo.png)
+
+<br>
+
+# [CloudFlare](https://www.cloudflare.com/)
 
 [CloudFlare](https://www.cloudflare.com/) is a service which makes your website
 faster and increases security.
@@ -83,4 +85,4 @@ a very low price or even free.
 * [AWS CloudFront](https://aws.amazon.com/cloudfront/)
 * [Azure CDN](https://azure.microsoft.com/en-us/services/cdn/)
 * [Akamai](https://www.akamai.com/us/en/cdn.jsp)
-* [MaxCDN])(https://www.maxcdn.com/)
+* [MaxCDN](https://www.maxcdn.com/)
