@@ -36,7 +36,7 @@ faster and increases security.
 * Each subdomain is a "new" site.
 * They limit the file size of uploads if you are uploading through CloudFlare.
 
-    See limits for each plan: https://www.cloudflare.com/plans/
+    See "Client maximum upload size" here: https://www.cloudflare.com/plans/#plans-table
 
 * Their business model [seems strange](https://www.bizety.com/2014/02/17/cloudflare-business-model/)
 
