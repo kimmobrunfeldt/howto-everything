@@ -23,7 +23,7 @@ faster and increases security.
     But be sure to check what plan you need. They have a bit different set of
     [features](https://www.cloudflare.com/plans/).
 
-* [Pricing](https://www.cloudflare.com/plans/) is quite cheap]
+* It's [very cheap](https://www.cloudflare.com/plans/)
 
     Used bandwidth doesn't matter, it is a fixed price per month.
 
@@ -60,6 +60,23 @@ faster and increases security.
 * Check that the CDN edge servers are actually near the location you would need them to be
 
     https://www.cloudflare.com/network-map/
+
+
+### My conclusion
+
+A few concerns:
+
+* I'm a bit worried what their real business model is or if they will change it later
+* I wouldn't use CloudFlare's small plans if the backing origin server costs could be potentially really high
+
+    For example if I have traffic 100TB/month and the origin server in S3, I wouldn't
+    use the smaller plans(less than "Business $200/month") to make the S3 bill cheaper.
+
+    There might be nasty surprises if CloudFlare decides to suddenly route
+    all that traffic to S3. See the above mentioned "incidents".
+
+But otherwise, I would definitely use it. They offer good set of features with
+a very low price or even free.
 
 ### Alternatives
 
