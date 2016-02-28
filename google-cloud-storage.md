@@ -11,6 +11,8 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+# Google Cloud Storage
+
 [Google Cloud Storage](https://cloud.google.com/storage/) is great for personal
 file sharing. Google also provides a feature to transfer all data from an S3 bucket
 to Google's cloud storage bucket.
