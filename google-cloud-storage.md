@@ -1,13 +1,7 @@
 # Google Cloud Storage
 
 [Google Cloud Storage](https://cloud.google.com/storage/) is great for personal
-file sharing. In my opinion it's better than S3 for these reasons:
-
-* Daily budget limit
-* Official CLI supports object uploads with a nice progress bar feature
-* Google Cloud admin UI is simpler than in AWS
-
-Google provides a feature to transfer all data from an S3 bucket
+file sharing. Google also provides a feature to transfer all data from an S3 bucket
 to Google's cloud storage bucket.
 
 After everything is setup, the actual upload to Cloud Storage is a single command:
