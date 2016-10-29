@@ -25,6 +25,9 @@ There's no time to waste in server setup.
 * Price. But remember to give some value for your time too. Heroku saves a lot of time.
 * For MS techs
 * Multiregion superhigh-availability
+* Static IP addresses. Causes trouble in apex domain DNS setup or integrations to systems which need firewall whitelisting
+  
+  Private Spaces help with outbound static IP ranges
 
 
 ## Other notes
