@@ -1,9 +1,11 @@
 # Creating a S3 bucket and IAM user
 
-We want:
+**We want:**
 
 * S3 bucket
 * IAM user which has access keys and very limited right to use the bucket
+
+## Do it
 
 1. Go to AWS console and IAM page > Users tab
 
