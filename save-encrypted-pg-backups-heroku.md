@@ -18,22 +18,32 @@ In my Heroku hosted projects, I save the following scripts to the repository to 
 set -x
 set -e
 
-APP_NAME=my-app
-DESTINATION_DIR='/Users/username/Google Drive/backups'
+APP_NAME=my-heroku-app
+DESTINATION_DIR='/Users/user/Google Drive/backups'
 DATE=$(date "+%Y-%m-%dT%H%M")
 
-DESTINATION="$DESTINATION_DIR/$APP_NAME-pg-$DATE.dump"
+FILE_NAME="$APP_NAME-pg-$DATE.dump"
+DESTINATION="$DESTINATION_DIR/$FILE_NAME"
+
+echo "Making a temp working dir .. "
+# https://unix.stackexchange.com/questions/30091/fix-or-alternative-for-mktemp-in-os-x
+TEMP_DIR=`mktemp -d 2>/dev/null || mktemp -d -t 'mytmpdir'`
+cd $TEMP_DIR
 
 echo "Taking postgres dump from prod .. "
-pg_dump --no-owner --no-acl -Fc $(heroku config:get DATABASE_URL -a $APP_NAME) > "$DESTINATION"
+pg_dump --no-owner --no-acl -Fc $(heroku config:get DATABASE_URL -a $APP_NAME) > postgres.dump
 
 echo "Encrypting file with GPG .. "
-gpg -c "$DESTINATION"
+gpg -c postgres.dump
+
+echo "Encrypting file with GPG .. "
+mv postgres.dump.gpg "$DESTINATION.gpg"
 
 echo "Removing unencrypted file .. "
-rm "$DESTINATION"
+rm postgres.dump
+rm -r "$TEMP_DIR"
 
-echo "Done. Database dump saved at $DESTINATION"
+echo "Done. Database dump saved at $DESTINATION.gpg"
 ```
 
 **./tools/restore-backup.sh**
