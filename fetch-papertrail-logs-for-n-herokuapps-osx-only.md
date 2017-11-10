@@ -2,6 +2,8 @@
 
 Fetches Papertrail archives N days to the past for multiple Heroku apps. Requires access to the Heroku apps and working heroku CLI.
 
+**Note: this does not fetch archive for TODAY, because it hasn't been generated yet.** See the command below to fetch today's logs.
+
 ```bash
 #!/bin/bash
 # http://help.papertrailapp.com/kb/how-it-works/permanent-log-archives/#downloading-multiple-archives
@@ -28,4 +30,10 @@ do
       xargs -I {} curl --progress-bar -f --no-include -o "$APP-{}.tsv.gz" \
       -L -H "X-Papertrail-Token: $TOKEN" https://papertrailapp.com/api/v1/archives/{}/download
 done
+```
+
+Also useful command:
+
+```
+PAPERTRAIL_API_TOKEN=$(heroku config:get PAPERTRAIL_API_TOKEN -a my-herokuapp1) papertrail --min-time 'yesterday 9PM' > logs.txt
 ```
