@@ -75,7 +75,8 @@ CREATE TABLE stuff (
 );
 ```
 
-**Usage:**
+With these tables in place, let's go through the process of how exactly the
+`gapless_counter` has to be incremented.
 
 1. Begin transaction
 2. Lock `increment` table with [`ACCESS EXCLUSIVE` mode][2]. This will block even reads to increment table before the transaction is finished. It's necessary for our use case.
