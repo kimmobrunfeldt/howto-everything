@@ -54,6 +54,10 @@ a new row to another table (`stuff`).
 
 The `stuff` table looks like this:
 
+| id (bigint) | counter (bigint) | created_at (timestamp)        |
+|-------------|------------------|-------------------------------|
+| 1           | 1                | 2017-11-17 12:44:17.488974+02 |
+
 ```sql
 CREATE SEQUENCE stuff_id_seq
   INCREMENT 1
