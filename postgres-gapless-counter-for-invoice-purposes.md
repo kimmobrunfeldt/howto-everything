@@ -136,6 +136,7 @@ results which happen in the middle of the transaction.
 
 
 That's it! As a reference, the full code to create the PG database is below.
+**Please check the [drawbacks](#drawbacks) section to see what are the risks.**
 
 
 ## Reference code
@@ -169,6 +170,22 @@ CREATE TABLE stuff (
 ```
 
 Now you're ready to test the insertion examples mentioned above.
+
+
+## Drawbacks
+
+The lock may have a huge negative impact to application performance. The operation
+is a bottleneck which allows only one process at a time to do the increment.
+
+It may also cause a situation where your Postgres connection pool will be completely exhausted.
+Imagine if your Postgres pool had maximum of 2 connections and this would happen:
+
+1. Session would acquire the lock and get stuck at application level (Node). **Pool: 1/2 connections left.**
+2. Second session would try to acquire the lock (waiting for the first one to finish). **Pool: 0/2 connections left.**
+3. Completely separate request comes in which would try to select rows from e.g. `users` table. This would try to start a new PG connection, but it would have to wait until a new connection is available in the pool.
+
+This is why we added the per transaction timeout, but it doesn't completely eliminate the
+risk.
 
 
 ## Optional safety triggers
