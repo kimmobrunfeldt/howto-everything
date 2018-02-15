@@ -20,6 +20,10 @@
 ### Replace all tabs to 4 spaces with expand. Finds all .js files in the current dir and its subdirs
 
     find . -name '*.js' ! -type d -exec bash -c 'expand -t 4 "$0" > /tmp/e && mv /tmp/e "$0"' {} \;
+    
+### Remove node_modules recursively
+
+    find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
 
 ### Loop
 
