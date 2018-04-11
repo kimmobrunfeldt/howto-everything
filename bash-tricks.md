@@ -41,3 +41,15 @@
 
 * `$0` means the full line
 * `arr[1]` is the matched regex group
+
+
+### Parse XML response with sed
+
+Assuming the XML api returns `<TagX>something</TagX>`, the command would output `something`.
+
+```
+curl "https://xmlapi.service.com" | sed -n 's:.*<TagX>\(.*\)</TagX>.*:\1:p')
+
+# or
+echo '<xml><TagX>  something</TagX></xml>' | sed -n 's:.*<TagX>\(.*\)</TagX>.*:\1:p'
+```
