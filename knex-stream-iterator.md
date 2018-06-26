@@ -5,7 +5,7 @@ Here's a short intro to the new Node 10 feature: https://zaiste.net/nodejs_10_as
 ```js
 // Requires node 10+
 const Knex = require('knex');
-const streamToIterator = require('stream-to-iterator');
+const asyncIterStream = require('async-iter-stream');
 
 const knex = Knex({
   client: 'pg',
@@ -19,7 +19,7 @@ async function getValues() {
   // Uncomment to test
   // throw new Error('test');
 
-  for await (const row of streamToIterator(stream)) {
+  for await (const row of asyncIterStream.wrap(stream)) {
     console.log(JSON.stringify(row));
 
     // Uncomment to test
