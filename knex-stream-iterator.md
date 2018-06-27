@@ -13,18 +13,38 @@ const knex = Knex({
   debug: false,
 });
 
+function withSafeStream(stream, func) {
+  return new BPromise((resolve, reject) => {
+    const rejectOnce = _.once(reject);
+    stream.on('error', (err) => {
+      rejectOnce(err);
+    });
+
+    const safeFunc = BPromise.method(func);
+
+    safeFunc(stream)
+      .then(val => resolve(val))
+      .catch(err => rejectOnce(err));
+  });
+}
+
 async function getValues() {
-  const stream = knex.raw('SELECT generate_series(1, 10)').stream();
+  const s = knex.raw('SELECT generate_series(1, 10)').stream();
 
-  // Uncomment to test
-  // throw new Error('test');
+  // Uncomment to test errors thrown from SQL
+  // const s = knex.raw('SELECT ,,, generate_series(1, 10)').stream();
 
-  for await (const row of asyncIterStream.wrap(stream)) {
-    console.log(JSON.stringify(row));
-
+  return withSafeStream(s, async (stream) => {
     // Uncomment to test
     // throw new Error('test');
-  }
+
+    for await (const row of asyncIterStream.wrap(stream)) {
+      console.log(JSON.stringify(row));
+
+      // Uncomment to test
+      // throw new Error('test');
+    }
+  });
 }
 
 function main() {
