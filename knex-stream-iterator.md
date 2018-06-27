@@ -5,11 +5,13 @@ Here's a short intro to the new Node 10 feature: https://zaiste.net/nodejs_10_as
 ```js
 // Requires node 10+
 const Knex = require('knex');
+const _ = require('lodash');
+const BPromise = require('bluebird');
 const asyncIterStream = require('async-iter-stream');
 
 const knex = Knex({
   client: 'pg',
-  connection: 'postgres://user:pass@localhost:5432/db',
+  connection: 'postgres://rank:rank@localhost:5432/rank',
   debug: false,
 });
 
