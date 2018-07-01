@@ -1,4 +1,4 @@
-# Figure out a name for <X>
+# Figure out a name for X
 
 Figure out a name for business, project, app, site, etc.
 
