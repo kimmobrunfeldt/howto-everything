@@ -6,6 +6,7 @@ Figure out a name for business, project, app, site, etc.
 
 
 * https://namelix.com/
+* http://www.panabee.com/
 * https://www.namemesh.com/
 * http://www.naminum.com/ 
 * https://www.vandelaydesign.com/business-name-generators/
