@@ -12,6 +12,7 @@ Figure out a name for business, project, app, site, etc.
 * https://www.vandelaydesign.com/business-name-generators/
 * http://www.thesaurus.com/ for finding synonyms
 * https://www.namecheckr.com/ Checking if social handles are available
+* https://namechk.com/ Checking if domains / social handles are available
 
 **Logo:**
 
