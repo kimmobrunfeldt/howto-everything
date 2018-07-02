@@ -5,13 +5,13 @@ Figure out a name for business, project, app, site, etc.
 **List of helpful sites:**
 
 
-* https://namelix.com/
-* http://www.panabee.com/
-* https://www.namemesh.com/
-* http://www.naminum.com/ 
+* https://namelix.com/ Generating names
+* http://www.panabee.com/ Generating names
+* https://www.namemesh.com/ Generating names
+* http://www.naminum.com/  Generating names
 * https://www.vandelaydesign.com/business-name-generators/
 * http://www.thesaurus.com/ for finding synonyms
-
+* https://www.namecheckr.com/ Checking if social handles are available
 
 **Logo:**
 
