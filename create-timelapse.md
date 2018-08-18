@@ -5,6 +5,19 @@ If you want to add timestamp to your video use: https://github.com/kimmobrunfeld
 
 After you have the set of new timestamped images, create timelapse.
 
+ffmpeg
+------
+
+Install https://gist.github.com/clayton/6196167
+
+Assuming we'd have files 0.jpg, 1.jpg, 2.jpg, ... and so on.
+
+```
+fmpeg -framerate 25 -i %00d.jpg -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p output.mp4
+```
+
+From: https://askubuntu.com/questions/610903/how-can-i-create-a-video-file-from-a-set-of-jpg-images
+
 Mencoder(MPlayer)
 -----------------
 
