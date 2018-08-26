@@ -25,6 +25,10 @@
 
     find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
 
+### Count lines of code recursively from dir
+
+    find src -name '*.js' -exec wc -l {} +
+
 ### Loop
 
     #!/bin/bash
