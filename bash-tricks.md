@@ -2,6 +2,24 @@
 
     egrep -lir --include=*.txt "text inside file" .
 
+### Find matching lines from JS code recursively from current directory 
+
+* `-i` ignore case
+* `-r` recursive
+* `--color` highlight match (this colors a bit too much because we also have the line length limiting)
+* `".{0,200}swagger.{0,200}$"` find all code lines which have word `swagger` in them, so that it must be in the limits of a "normal" code line length. If you write longer lines then 200, increase the number.
+
+```bash
+egrep -ir --color --exclude-dir={node_modules,build} --include=*.js "^.{0,200}swagger.{0,200}$" .
+```
+
+Improvement idea, additional grep to fix the coloring issue
+
+```bash
+egrep -ir --exclude-dir={node_modules,build} --include=*.js "^.{0,200}swagger.{0,200}$" . | grep --color "swagger"
+```
+
+
 ### List tar(.gz) file contents
 
     tar -tvf file.tar
