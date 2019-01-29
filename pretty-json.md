@@ -3,11 +3,15 @@
 Stringifying JSON in JS is easy with built-in function: `JSON.stringify(myObject, null, 2)`. 
 This works great for most cases, but sometimes you might want a bit more control over the output format.
 
-## Option 1: prettier (my recommendation)
 
-https://github.com/prettier/prettier
+## Option 1: json-stringify-pretty-compact 
+
+**NOTE:** This PR needs to be merged before the explanation below is true: https://github.com/lydell/json-stringify-pretty-compact/pull/19
+
+https://github.com/lydell/json-stringify-pretty-compact
 
 Turns this
+
 ```json
 {
   "from": "decisions",
@@ -33,49 +37,34 @@ into this:
 }
 ```
 
-The good feature is that it nicely inlines objects which can nicely fit in one line. This makes the JSON 
-in my opionion more readable. It also nicely inlines only the leaf objects in the JSON tree.
+It looks clean, and also inlines objects and arrays which don't have new arrays or objects inside them, and fit the given maxLength width.
 
 
 ### Example code
 
 ```js
-const prettier = require('prettier')
+const stringify = require('json-stringify-pretty-compact')
 
-const str = `
-{
+const obj = {
   "from": "decisions",
   "where": {"product.name": {"$match": "Banana"}, "behavior.user": "veronica"},
   "recommend": "product",
   "goal": {"purchase": true},
   "limit": 5
 }
-`
 
-const result = prettier.format(str, { parser: 'json' })
+const result = stringify(obj, { maxNesting: 1, margins: true })
 console.log(result)
 ```
 
 
-## Option 2: json-stringify-pretty-compact
 
-https://github.com/lydell/json-stringify-pretty-compact
+## Option 2: prettier
 
-This tool is also great, but with the caveat that the formatting rules are a bit more simpler. 
-It might inline objects which are not the leaf objects in the JSON tree, if they fit the given character width limit. This output was produced by the tool:
+https://github.com/prettier/prettier
 
-```json
-{
-  "from": "decisions",
-  "where": {"product.name": {"$match": "Banana"}, "behavior.user": "veronica"},
-  "recommend": "product",
-  "goal": {"purchase": true},
-  "limit": 5
-}
-```
 
-It looks clean (you could also add spacing for brackets with margin), but it inlines the where object completely, which I don't prefer.
-
+Does the same thing as the option 1 but doesn't have a similar option to maxNesting.
 
 
 ## Other resources
