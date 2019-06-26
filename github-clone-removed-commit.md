@@ -33,3 +33,6 @@ curl -v -X POST --user '<username>:<token>' https://api.github.com/repos/:ACCOUN
 `origin/branch-pointing-to-lost-commit`, which is now a normal branch you can work with.
 4. (Optionally) Disable the created API-token
 
+
+Links:
+https://developer.github.com/v3/git/refs/#create-a-reference
