@@ -6,7 +6,7 @@ Usage: `bash pg-copy.sh $(heroku config:get DATABASE_URL -a MY_APP) postgres://u
 
 
 
-```
+```bash
 #!/bin/bash
 
 set -e
