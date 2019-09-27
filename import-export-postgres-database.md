@@ -56,7 +56,6 @@ echo "Copying $DB1 -> $DB2 .. "
 # pg_restore options:
 # --clean
 #    Clean (drop) database objects before recreating them.
-# --create
-#   Create the database before restoring into it.
+
 pg_dump --no-owner --no-acl -F custom "$DB1" | pg_restore -F custom --clean -d "$DB2"
 ```
