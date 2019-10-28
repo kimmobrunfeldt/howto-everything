@@ -69,6 +69,8 @@ You can optionally save the configs to e.g. 1password. `zip -r algo-configs.zip 
     
     WireGuard is an open source VPN client, which makes installing the client VPN configs easier. See https://www.wireguard.com/.
     
+    Install via configuration file and browse to `configs/x.x.x.x/wireguard/laptop.conf`
+    
 * In iOS, install WireGuard at https://itunes.apple.com/us/app/wireguard/id1441195209?mt=8, and scan the QR code from your computer. 
 
     ```
