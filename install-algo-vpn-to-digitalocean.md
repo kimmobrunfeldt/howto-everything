@@ -65,21 +65,22 @@ You can optionally save the configs to e.g. 1password. `zip -r algo-configs.zip 
 *Refer to https://github.com/trailofbits/algo#configure-the-vpn-clients for full client guides.*
 
 
-* In MacOS, install WireGuard at https://apps.apple.com/us/app/wireguard/id1451685025?mt=12 and 
-    
-    WireGuard is an open source VPN client, which makes installing the client VPN configs easier. See https://www.wireguard.com/.
-    
-    Install via configuration file and browse to `configs/x.x.x.x/wireguard/laptop.conf`
-    
-* In iOS, install WireGuard at https://itunes.apple.com/us/app/wireguard/id1441195209?mt=8, and scan the QR code from your computer. 
 
-    ```
-    open configs/x.x.x.x/wireguard/phone.png
-    ```
+### MacOS
+
+*WireGuard is an open source VPN client, which makes installing the client VPN configs easier. See https://www.wireguard.com/.*   
+
+Install WireGuard at https://apps.apple.com/us/app/wireguard/id1451685025?mt=12 and open the app. Click "install via configuration file" or similar and browse to `configs/x.x.x.x/wireguard/laptop.conf`.
     
-    Where x.x.x.x is the IP address of the created Droplet.
-    
-    
+### iOS
+
+Install WireGuard at https://itunes.apple.com/us/app/wireguard/id1441195209?mt=8, and scan the QR code from your computer. 
+
+To show the QR code, run *(where x.x.x.x is the IP address of the created Droplet)*:
+
+```
+open configs/x.x.x.x/wireguard/phone.png
+```    
 
 ## Glossary
 
