@@ -57,7 +57,16 @@ The default configuration is taken from `config.cfg` file, and contains three us
 * laptop 
 * phone
 
-You can optionally save the configs to e.g. 1password. `zip -r algo-configs.zip configs` and save the zip file to 1password. If you lose the keys, you can always reinstall the server.
+
+### Save the secrets
+
+1. Save the output banner which contains the passwords etc to 1password 
+
+    This is needed for possibly updating users later. 
+    
+2. You can optionally save the configs to e.g. 1password. `zip -r algo-configs.zip configs` and save the zip file to 1password
+
+    Needed for easy reconfiguration of a device. Optional, because if you lose the keys, you can always reinstall the server.
 
 
 ## Install clients
