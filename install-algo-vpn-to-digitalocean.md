@@ -4,7 +4,7 @@
 
 
 
-## Install
+## Install server
 
 In case something is missing here, refer to their DO install guide at https://github.com/trailofbits/algo/blob/88eaf30e65df5ac2128f035954b275608f380fc1/docs/cloud-do.md.
 
@@ -51,10 +51,28 @@ ok: [x.x.x.x] => {
 }
 ```
 
-Then save the configs to e.g. 1password.
+The default configuration is taken from `config.cfg` file, and contains three users: 
 
-```
-zip -r algo-configs.zip configs
-```
+* desktop
+* laptop 
+* phone
 
-and save the zip file to 1password. If you lose the keys, you can always reinstall the server.
+You can optionally save the configs to e.g. 1password. `zip -r algo-configs.zip configs` and save the zip file to 1password. If you lose the keys, you can always reinstall the server.
+
+
+## Install clients
+
+*Refer to https://github.com/trailofbits/algo#configure-the-vpn-clients for full client guides.*
+
+
+* In MacOS, install WireGuard at https://apps.apple.com/us/app/wireguard/id1451685025?mt=12 and 
+    
+    WireGuard is an open source VPN client, which makes installing the client VPN configs easier. See https://www.wireguard.com/.
+    
+* In iOS, install WireGuard at https://itunes.apple.com/us/app/wireguard/id1441195209?mt=8, and scan the QR code from your computer. 
+
+    ```
+    open configs/x.x.x.x/wireguard/phone.png
+    ```
+    
+    Where x.x.x.x is the IP address of the created Droplet.
