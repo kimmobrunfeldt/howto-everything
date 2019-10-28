@@ -94,6 +94,13 @@ open configs/x.x.x.x/wireguard/phone.png
 ```    
 
 
+## Cleaning up secrets after installation
+
+Run `rm -rf configs` in the algo repository directory after you have installed the VPN clients. WireGuard copies the secrets to its own storage so removing the configs folder is fine.
+
+If you stored the configs as a zip in 1password, it can be always unzipped to the same place to e.g. update users.
+
+
 ## Update users
 
 * Go to algo project dir
