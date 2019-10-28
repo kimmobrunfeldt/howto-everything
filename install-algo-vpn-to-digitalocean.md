@@ -3,31 +3,33 @@
 [Algo](https://github.com/trailofbits/algo) is an easy way to set up a personal VPN in the cloud. 
 
 
-
 ## Install server
 
-In case something is missing here, refer to their DO install guide at https://github.com/trailofbits/algo/blob/88eaf30e65df5ac2128f035954b275608f380fc1/docs/cloud-do.md.
+In case something is missing here, refer to their DO install guide at https://github.com/trailofbits/algo/blob/88eaf30e65df5ac2128f035954b275608f380fc1/docs/cloud-do.md and Docker client guide here https://github.com/trailofbits/algo/blob/61729ac9b56de477efe87f7d2a4fa5dd7a7af2ae/docs/deploy-from-docker.md.
 
 
 Generate an API token in Digital Ocean, then run:
 
 ```
 export DO_TOKEN=<your-token-herer>
-brew install ansible
+
 git clone git@github.com:trailofbits/algo.git
 cd algo
 
-python3 -m pip install -U -r requirements.txt
-
-ansible-playbook main.yml -e "provider=digitalocean
-                                server_name=algo
-                                ondemand_cellular=false
-                                ondemand_wifi=true
-                                dns_adblocking=false
-                                ssh_tunneling=false
-                                store_pki=true
-                                region=fra1
-                                do_token=$DO_TOKEN"
+ALGO_ARGS="provider=digitalocean
+  server_name=algo
+  ondemand_cellular=true
+  ondemand_wifi=true
+  dns_adblocking=false
+  ssh_tunneling=false
+  store_pki=true
+  region=fra1
+  do_token=$DO_TOKEN"
+                                
+docker run --cap-drop=all -it \
+  -e "ALGO_ARGS=$ALGO_ARGS" \
+  -v $(pwd):/data \
+  trailofbits/algo:latest
 ```
 
 The installation takes quite a while. After it's finished, you should see the following banner. 
@@ -62,7 +64,7 @@ The default configuration is taken from `config.cfg` file, and contains three us
 
 1. Save the output banner which contains the passwords etc to 1password 
 
-    This is needed for possibly updating users later. 
+    This is needed for possibly updating users later. **Note:** updating users will create new p12 and SSH key passwords for new users. 
     
 2. You can optionally save the configs to e.g. 1password. `zip -r algo-configs.zip configs` and save the zip file to 1password
 
@@ -90,6 +92,20 @@ To show the QR code, run *(where x.x.x.x is the IP address of the created Drople
 ```
 open configs/x.x.x.x/wireguard/phone.png
 ```    
+
+
+## Update users
+
+* Go to algo project dir
+* Update config.cfg to contain wanted users
+* Run update users
+
+    ```
+    docker run --cap-drop=all -it \
+      -e "ALGO_ARGS=update-users" \
+      -v $(pwd):/data \
+      trailofbits/algo:latest
+    ```
 
 ## Glossary
 
