@@ -5,7 +5,7 @@
 
 ## Install server
 
-In case something is missing here, refer to their DO install guide at https://github.com/trailofbits/algo/blob/88eaf30e65df5ac2128f035954b275608f380fc1/docs/cloud-do.md and Docker client guide here https://github.com/trailofbits/algo/blob/61729ac9b56de477efe87f7d2a4fa5dd7a7af2ae/docs/deploy-from-docker.md.
+In case something is missing here, refer to their [DO install guide](https://github.com/trailofbits/algo/blob/88eaf30e65df5ac2128f035954b275608f380fc1/docs/cloud-do.md) or [Docker client guide](https://github.com/trailofbits/algo/blob/61729ac9b56de477efe87f7d2a4fa5dd7a7af2ae/docs/deploy-from-docker.md).
 
 
 Generate an API token in Digital Ocean, then run:
