@@ -78,3 +78,8 @@ You can optionally save the configs to e.g. 1password. `zip -r algo-configs.zip 
     ```
     
     Where x.x.x.x is the IP address of the created Droplet.
+
+
+## Terms
+
+* **On demand** = automatic VPN connection
