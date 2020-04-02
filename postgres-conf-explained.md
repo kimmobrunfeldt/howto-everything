@@ -12,7 +12,7 @@ The settings are tuned for:
 * Write once (import), read-only when hosting.
 
 
-```conf
+```apacheconf
 # Intended for server with 128GB RAM
 #
 # Some useful links:
