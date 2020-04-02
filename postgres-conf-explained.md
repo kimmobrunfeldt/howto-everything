@@ -25,10 +25,11 @@ The settings are tuned for:
 
 
 # Basic settings
-data_directory = '/var/lib/postgresql/10/main'		# use data in another directory
+data_directory = '/var/lib/postgresql/10/main'
 hba_file = '/etc/postgresql/10/main/pg_hba.conf'	# host-based authentication file
 ident_file = '/etc/postgresql/10/main/pg_ident.conf'	# ident configuration file
 port = 5432
+
 # If external_pid_file is not explicitly set, no extra PID file is written.
 external_pid_file = '/var/run/postgresql/10-main.pid'
 
