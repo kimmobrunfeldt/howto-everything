@@ -23,4 +23,4 @@ aws cloudwatch get-metric-statistics --namespace AWS/S3 --start-time "$(echo "$n
 echo -e "\n\nTotal amount of files in S3 bucket named: $bucket"
 aws cloudwatch get-metric-statistics --namespace AWS/S3 --start-time "$(echo "$now - 86400" | bc)" --end-time "$now" --period 86400 --statistics Average --region eu-west-1 --metric-name NumberOfObjects --dimensions Name=BucketName,Value="$bucket" Name=StorageType,Value=AllStorageTypes
 
-```bash
+```
