@@ -3,7 +3,7 @@
 
 This doc gathers useful links and information about generating PDFs for printing purposes with Node.js. 
 PDF is a flexible file format, and there are standards which allow only a subset of PDF features to 
-enable better compability for certain use cases [1][1]:
+enable better compability for certain use cases [[1][1]]:
 
 * PDF/X: Ensures the file will work when sent for professional printing (all fonts embedded, no RGB colors, etc.).
 * PDF/A: Ensures the file is appropriate for archiving-that is, it will remain readable for a long time, despite changes in technology.
