@@ -20,6 +20,7 @@ enable better compability for certain use cases [[1][1]]:
 * https://www.ghostscript.com/doc/9.27/VectorDevices.htm#PDFX
 * https://graphicdesign.stackexchange.com/questions/119758/why-isnt-convert-all-spots-to-cmyk-converting-my-pdf-to-cmyk-in-adobe-acroba
 * https://github.com/alafr/SVG-to-PDFKit/pull/62
+* https://www.pdfa.org/understanding-overprint/
 
 
 [1]: https://www.peachpit.com/articles/article.aspx?p=1765610&seqNum=11
