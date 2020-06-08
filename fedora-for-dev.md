@@ -1,4 +1,4 @@
-# Configuring Fedora for dev work
+# Configuring Fedora 32 for dev work
 
 
 * Increase max_user_watches https://unix.stackexchange.com/questions/13751/kernel-inotify-watch-limit-reached
@@ -11,6 +11,9 @@
 
 * sudo dnf install postgresql for psql client
 
+* Install docker https://docs.docker.com/engine/install/fedora/
+
+    See this issue with Fedora 32: https://github.com/docker/for-linux/issues/955#issuecomment-620932240
 
 ## Python
 
