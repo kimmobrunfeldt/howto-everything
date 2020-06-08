@@ -11,9 +11,15 @@
 
 * sudo dnf install postgresql for psql client
 
-* Install docker https://docs.docker.com/engine/install/fedora/
+* Install Docker
 
-    See this issue with Fedora 32: https://github.com/docker/for-linux/issues/955#issuecomment-620932240
+    **Options are:**
+    
+    1. [podman](https://podman.io/) for running docker images 
+    1. Install moby-engine, see Option 2 at https://www.linuxuprising.com/2019/11/how-to-install-and-use-docker-on-fedora.html
+    1. Docker https://docs.docker.com/engine/install/fedora/
+
+    This issue contains useful info about Docker issues with Fedora 32: https://github.com/docker/for-linux/issues/955#issuecomment-620932240
 
 ## Python
 
