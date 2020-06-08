@@ -9,8 +9,11 @@
     sudo dnf install ffmpeg
     sudo dnf install peek
 
+* sudo dnf install postgresql for psql client
+
 
 ## Python
 
 * sudo dnf install python3-devel.x86_64
 * Install pipenv for per-project installs instead of global https://docs.python-guide.org/dev/virtualenvs/#installing-pipenv
+
