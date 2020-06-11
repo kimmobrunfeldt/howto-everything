@@ -37,5 +37,4 @@ Link | Commits* | JS/TS | Styling | License | Tests | Other
 * Most of these repos are monorepos managed with Lerna. Commit count is just to give rough estimate of how much the code has been iterated.
 
 
-
-For fun, search how many times Button has been reinvented in GitHub: https://github.com/search?l=&p=99&q=created%3A%3E2015-01-01+extension%3Ajs+extension%3Ajsx+extension%3Ats+extension%3Atsx+size%3A%3E100+filename%3AButton.js+filename%3AButton.ts+filename%3AButton.jsx+filename%3AButton.tsx+filename%3Abutton.js+filename%3Abutton.ts+filename%3Abutton.jsx+filename%3Abutton.tsx&ref=advsearch&type=Code
+For further investigation, see how many Button components there are in GitHub: https://github.com/search?l=&p=99&q=created%3A%3E2015-01-01+extension%3Ajs+extension%3Ajsx+extension%3Ats+extension%3Atsx+size%3A%3E100+filename%3AButton.js+filename%3AButton.ts+filename%3AButton.jsx+filename%3AButton.tsx+filename%3Abutton.js+filename%3Abutton.ts+filename%3Abutton.jsx+filename%3Abutton.tsx&ref=advsearch&type=Code
