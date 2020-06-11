@@ -2,7 +2,7 @@
 
 
 Link | JS / TS | Styling | Other
-----------------------------------
+-----|---------|---------|--------
 [VTEX Styleguide](https://github.com/vtex/styleguide/tree/master/react) | JS | Custom [Tachyons](https://vtex.github.io/vtex-tachyons/) classes + CSS. Example [implementation](https://github.com/vtex/styleguide/blob/master/react/components/Input/index.js) and [CSS](https://github.com/vtex/styleguide/blob/master/react/components/Input/Input.css)
 [React Bootstrap](https://github.com/react-bootstrap/react-bootstrap/tree/master/src) | JS | Bootstrap CSS classes
 [Zendesk Garden](https://github.com/zendeskgarden/react-components/tree/master/packages) | TS | styled-components | Storybook
