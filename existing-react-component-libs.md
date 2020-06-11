@@ -5,7 +5,7 @@ Some of the projects are huge, the link most commonly points directly to the par
 
 Next things to consider:
 
-* Is treeshaking possible when using just parts of the library? Size of the dist also, but treeshaking the footprint should be quite similar across libraries
+* Is treeshaking possible when using just parts of the library? Size of the dist is also important factor, but after treeshaking the footprint should be quite similar across libraries
 * Maturity and activeness (commits, recent activity, contributor distribution, closed vs open issues, PR merging activity)
 * Are they migrating to another tech ? JS -> TS, Sass -> styled-components, etc
 * Owners, is it community driven or company driven? Project with 13 stars can be super mature if it's been developed internally in a company for 20k commits for N years
