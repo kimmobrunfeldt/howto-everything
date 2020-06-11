@@ -4,7 +4,6 @@ Some of the projects are huge, the link most commonly points directly to the par
 
 Link | JS/TS | Styling | License | Other
 -----|-------|---------|---------|--------
-
 [React Bootstrap](https://github.com/react-bootstrap/react-bootstrap/tree/master/src) | JS | Bootstrap CSS classes | MIT (also Bootstrap is MIT)
 [Zendesk Garden](https://github.com/zendeskgarden/react-components/tree/master/packages) | TS | styled-components | Apache 2.0  | ☑️ Storybook
 [Material UI](https://github.com/mui-org/material-ui/tree/master/packages/material-ui/src) | JS | CLSX, CSS in JS. [Example](https://github.com/mui-org/material-ui/blob/edb2d6382e271dbfc28384b10c417c0f5843e8f8/packages/material-ui/src/Button/Button.js#L9) | MIT
