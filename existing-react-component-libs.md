@@ -3,7 +3,7 @@
 Some of the projects are huge, the link most commonly points directly to the part of the code base which defines the components.
 
 Link | JS/TS | Styling | License | Other
------|---------|---------|--------
+-----|-------|---------|---------|--------
 
 [React Bootstrap](https://github.com/react-bootstrap/react-bootstrap/tree/master/src) | JS | Bootstrap CSS classes | MIT (also Bootstrap is MIT)
 [Zendesk Garden](https://github.com/zendeskgarden/react-components/tree/master/packages) | TS | styled-components | Apache 2.0  | ☑️ Storybook
