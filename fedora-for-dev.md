@@ -1,5 +1,13 @@
-# Configuring Fedora 32 for dev work
 
+My history:
+
+* [-2012 Ubuntu](https://apple.stackexchange.com/questions/68848/switching-from-ubuntu-to-os-x-and-im-lost)
+* [2012-2020 OS X / Macos](https://gist.github.com/kimmobrunfeldt/350f4898d1b82cf10bce)
+* Today Fedora for work, Macbook for personal coding, Windows for gaming, 3D, and Adobe tools
+
+
+
+# Configuring Fedora 32 for dev work
 
 * Increase max_user_watches https://unix.stackexchange.com/questions/13751/kernel-inotify-watch-limit-reached
 * Use dead keys variant of keyboard for easier markdown backtick writing
