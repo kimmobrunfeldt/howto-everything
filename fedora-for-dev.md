@@ -3,7 +3,20 @@
 
 * Increase max_user_watches https://unix.stackexchange.com/questions/13751/kernel-inotify-watch-limit-reached
 * Use dead keys variant of keyboard for easier markdown backtick writing
+* Open Gnome keyboard shortcuts
+    * Set alt + w for closing window
+    * Set alt + q as a new command for `xkill`. See https://blog.christophersmart.com/2009/07/29/simple-graphical-kill-in-gnome/#:~:text=Click%20on%20the%20right%20hand,simply%20by%20clicking%20on%20it.
+    
 * Install Gnome Tweaks to control fine grained Gnome options
+    * Extensions
+        * Set "overlay a tasteful logo" to disabled
+    * Top bar
+        * Disable Activities Overview Hot Corner
+        * Tune Top bar clock as you wish
+    * Window Titlebars
+        * Titlebar Buttons, enable minimize and maximize
+    * Workspaces
+        * Set to Static Workspaces -> 2
 * Install [Peek](https://github.com/phw/peek) for sharing quick interactions to Slack or PRs
 
     sudo dnf install ffmpeg
@@ -25,4 +38,6 @@
 
 * sudo dnf install python3-devel.x86_64
 * Install pipenv for per-project installs instead of global https://docs.python-guide.org/dev/virtualenvs/#installing-pipenv
+
+
 
