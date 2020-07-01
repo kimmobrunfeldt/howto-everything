@@ -36,6 +36,7 @@ My history:
 
 * `sudo dnf install postgresql` for psql client
 
+* https://medium.com/@damko/a-simple-humble-but-comprehensive-guide-to-xkb-for-linux-6f1ad5e13450
 * Setup Xmodmap for custom keyboard shortcuts. Use `xev` command to figure out keycodes. ([more](https://unix.stackexchange.com/questions/49650/how-to-get-keycodes-for-xmodmap))
 
    Instructions for setup: https://wiki.archlinux.org/index.php/Xmodmap
@@ -51,8 +52,8 @@ My history:
    ```patch
    -keycode  17 = 8 parenleft 8 asterisk bracketleft less
    +keycode  17 = 8 parenleft 8 asterisk bracketleft braceleft
-   -keycode  18 = 9 parenright 9 parenleft bracketright braceright
-   +keycode  18 = 9 parenright 9 parenleft bracketright greater
+   -keycode  18 = 9 parenright 9 parenleft bracketright greater
+   +keycode  18 = 9 parenright 9 parenleft bracketright braceright
    ```
    
    then run `xmodmap ~/.Xmodmap` to reload changes. It freezes for a while.
