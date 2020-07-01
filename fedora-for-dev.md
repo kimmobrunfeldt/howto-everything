@@ -61,7 +61,6 @@ My history:
    ```
    keycode  17 = 8 parenleft 8 asterisk bracketleft braceleft
    keycode  18 = 9 parenright 9 parenleft bracketright braceright
-
    ```
    
    then run `xmodmap ~/.Xmodmap` to reload changes for current X session. To apply changes at startup, follow [these instructions](https://askubuntu.com/a/958510). In case the link dies, here's recap:
