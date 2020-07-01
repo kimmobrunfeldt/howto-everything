@@ -36,10 +36,10 @@ My history:
 
 * `sudo dnf install postgresql` for psql client
 
-* https://medium.com/@damko/a-simple-humble-but-comprehensive-guide-to-xkb-for-linux-6f1ad5e13450
 * Setup Xmodmap for custom keyboard shortcuts. Use `xev` command to figure out keycodes. ([more](https://unix.stackexchange.com/questions/49650/how-to-get-keycodes-for-xmodmap))
 
-   Instructions for setup: https://wiki.archlinux.org/index.php/Xmodmap
+   Instructions for setup: https://wiki.archlinux.org/index.php/Xmodmap. Setting keyboard shortcuts is certainly possible in linux but 
+   the consensus how to do this varies A LOT. This seems to be the simplest way to setup keyboard mappings in Fedora 32 + X + Gnome.
    
    After setup, change keyboard mapping to have similar brace behavior as MacOS has. It is very logical, all needed
    characters are under keys 8 and 9.
@@ -48,7 +48,7 @@ My history:
    * AltGr + 8 = `[`
    * Shift + AltGr + 8 = `{`
    
-   
+   To list current mappings, run `xmodmap -pke`. We'll change a few items there. The fifth item is the one we want to change:
    ```patch
    -keycode  17 = 8 parenleft 8 asterisk bracketleft less
    +keycode  17 = 8 parenleft 8 asterisk bracketleft braceleft
@@ -56,7 +56,33 @@ My history:
    +keycode  18 = 9 parenright 9 parenleft bracketright braceright
    ```
    
-   then run `xmodmap ~/.Xmodmap` to reload changes. It freezes for a while.
+   To do this on each startup, add the following lines to `~/.Xmodmap` file:
+   
+   ```
+   keycode  17 = 8 parenleft 8 asterisk bracketleft braceleft
+   keycode  18 = 9 parenright 9 parenleft bracketright braceright
+
+   ```
+   
+   then run `xmodmap ~/.Xmodmap` to reload changes for current X session. To apply changes at startup, follow [these instructions](https://askubuntu.com/a/958510). In case the link dies, here's recap:
+   
+   Add following lines to a xdg startup items: `nano ~/.config/autostart/xmodmap.desktop`:
+   
+   ```
+   [Desktop Entry]
+   Name[en_US]=Xmodmap
+   Comment[en_US]=xmodmap ~/.Xmodmap
+   Exec=/usr/bin/xmodmap .Xmodmap
+   Icon=application-default-icon
+   X-GNOME-Autostart-enabled=true
+   Type=Application
+   ```
+   
+   
+   More references:
+   
+   * https://medium.com/@damko/a-simple-humble-but-comprehensive-guide-to-xkb-for-linux-6f1ad5e13450
+   * https://yulistic.gitlab.io/2017/12/linux-keymapping-with-udev-hwdb/
 
    
 * Install Docker
