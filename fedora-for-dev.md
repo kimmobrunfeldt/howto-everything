@@ -9,10 +9,26 @@ My history:
 
 # Configuring Fedora 32 for dev work
 
+*This a personal setup, not all settings might work for you. Read the document through and pick up the good parts to your preferences.*
+
+
+## Tips
+
+   
+* Use Ctrl + PgDown and Ctrl + PgUp for changing tabs in apps with keyboard.
+* Lenovo Thinkpad supports Fn + Right Arrow and Fn + Left Arrow for End and Home. Useful to go to the start or end of line.
+* Some times copy - pasting stuff to terminal with middle click brings up weidr [200~ chars, see: https://cirw.in/blog/bracketed-paste
+* Resize windows with Super + Mouse middle click and drag (Gnome)
+* Move windows with Super + Mouse left click and drag (Gnome)
+   
+
+## Configuration
+
 * Configure windowing to use X11 instead of new default Wayland: https://docs.fedoraproject.org/en-US/quick-docs/configuring-xorg-as-default-gnome-session/
 
    With Wayland, bluetooth mouse refresh rate was very slow and sluggish.
    
+* `alias open='xdg-open'` Allows you to run `open .` to open file browser, etc.
 * Increase max_user_watches https://unix.stackexchange.com/questions/13751/kernel-inotify-watch-limit-reached
 * Use dead keys variant of keyboard for easier markdown backtick writing
 * Open Gnome keyboard shortcuts
@@ -29,12 +45,6 @@ My history:
         * Titlebar Buttons, enable minimize and maximize
     * Workspaces
         * Set to Static Workspaces -> 2
-* Install [Peek](https://github.com/phw/peek) for sharing quick interactions to Slack or PRs
-
-    sudo dnf install ffmpeg
-    sudo dnf install peek
-
-* `sudo dnf install postgresql` for psql client
 
 * Setup Xmodmap for custom keyboard shortcuts. Use `xev` command to figure out keycodes. ([more](https://unix.stackexchange.com/questions/49650/how-to-get-keycodes-for-xmodmap))
 
@@ -83,7 +93,15 @@ My history:
    * https://medium.com/@damko/a-simple-humble-but-comprehensive-guide-to-xkb-for-linux-6f1ad5e13450
    * https://yulistic.gitlab.io/2017/12/linux-keymapping-with-udev-hwdb/
 
-   
+ 
+## Install tools
+
+* Install [Peek](https://github.com/phw/peek) for sharing quick interactions to Slack or PRs
+
+    sudo dnf install ffmpeg
+    sudo dnf install peek
+
+* `sudo dnf install postgresql` for psql client
 * Install Docker
 
     **Options are:**
@@ -108,7 +126,6 @@ My history:
       It provides a nice way to stage changes by lines. For all other operations I use CLI.
       
 * Install [z for jumping](https://github.com/rupa/z). I have it aliased as `j` for jumping to directories
-* `alias open='xdg-open'` Allows you to run `open .` to open file browser, etc.
 * Install VS Code
 
    My settings:
@@ -184,14 +201,8 @@ My history:
    * MDX
    * Prettier
    * Python
-   
-* Use Ctrl + PgDown and Ctrl + PgUp for changing tabs in apps with keyboard
-* Some times copy - pasting stuff to terminal with middle click brings up weidr [200~ chars, see: https://cirw.in/blog/bracketed-paste
-* Resize windows with Super + Mouse middle click and drag (Gnome)
-* Move windows with Super + Mouse left click and drag (Gnome)
-   
 
-## Python
+### Python
 
 * `sudo dnf install python3-devel.x86_64`
 * Install pipenv for per-project installs instead of global https://docs.python-guide.org/dev/virtualenvs/#installing-pipenv
