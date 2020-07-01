@@ -153,18 +153,18 @@ Stuff I haven't been able to solve yet:
 
 * Install [Git Cola](https://git-cola.github.io/) for git UI.
    
-      ```
-      sudo dnf install git-cola
-      ```
-      
-      It provides a nice way to stage changes by lines. For all other operations I use CLI.
-      Git Cola was the best alternative for Sourcetree in my simple use case.
-      Also add aliases:
-      
-      ```bash
-      alias cola='git-cola'
-      alias stree='git-cola'  # old habits.. don't do this
-      ```
+   ```
+   sudo dnf install git-cola
+   ```
+
+   It provides a nice way to stage changes by lines. For all other operations I use CLI.
+   Git Cola was the best alternative for Sourcetree in my simple use case.
+   Also add aliases:
+
+   ```bash
+   alias cola='git-cola'
+   alias stree='git-cola'  # old habits.. don't do this
+   ```
   
 * Install [z for jumping](https://github.com/rupa/z). I have it aliased as `j` for jumping to directories
 * Install VS Code
