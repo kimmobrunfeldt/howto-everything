@@ -159,7 +159,7 @@ Stuff I haven't been able to solve yet:
       
       It provides a nice way to stage changes by lines. For all other operations I use CLI.
       Git Cola was the best alternative for Sourcetree in my simple use case.
-      Also add aliases
+      Also add aliases:
       
       ```bash
       alias cola='git-cola'
