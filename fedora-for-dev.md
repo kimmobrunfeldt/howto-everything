@@ -134,6 +134,7 @@ My history:
    * Python
    
 * Use Ctrl + PgDown and Ctrl + PgUp for changing tabs in apps with keyboard
+* Some times copy - pasting stuff to terminal with middle click brings up weidr [200~ chars, see: https://cirw.in/blog/bracketed-paste
 
    
 
