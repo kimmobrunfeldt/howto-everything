@@ -55,6 +55,56 @@ Stuff I haven't been able to solve yet:
     * Workspaces
         * Set to Static Workspaces -> 2
         
+* To connect Bose QC35 with high quality audio. Follow these steps: https://askubuntu.com/a/885198.
+
+   1. Before everything you can do a situation reset by removing Bose bluetooth device from your computer.
+   
+      Gnome settings can remove a device, but after that it still appeared in bluetoothctl for me:
+
+      ```
+      bluetoothctl
+
+      # Then in bluetooth shell
+      devices
+      remove XX:XX:XX:XX:XX:XX
+      ```
+
+      Then hold Bose power switch 10 seconds in the direction which normally starts pairing. 
+      After 10 secs it will remove all remembered devices from internal memory.
+
+      Now you should be clear to start the reconnect process.
+   
+   1. Upgrade Bose firmware if possible
+
+   1. Create /etc/bluetooth/audio.conf
+
+      ```
+      [General]
+      Disable=Socket
+      Disable=Headset
+      Enable=Media,Source,Sink,Gateway
+      AutoConnect=true
+      load-module module-switch-on-connect
+      ```
+
+   2. In /etc/bluetooth/main.conf set
+
+      ```
+      ControllerMode = bredr
+      AutoEnable=true
+      ```
+   
+   3. Restart bluetooth
+   
+      ```
+      sudo service bluetooth restart
+      ```
+   4. Connect your headphones
+   
+   5. Choose High Fidelity Playback (A2DP sink)-mode in sound options
+
+
+
 * Configure windowing to use X11 instead of new default Wayland: https://docs.fedoraproject.org/en-US/quick-docs/configuring-xorg-as-default-gnome-session/
 
    With Wayland, bluetooth mouse refresh rate was very slow and sluggish.
