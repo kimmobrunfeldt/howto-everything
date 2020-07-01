@@ -50,6 +50,13 @@ Some tips may be meant only for Thinkpads or even the specific model T490.*
     * Workspaces
         * Set to Static Workspaces -> 2
 
+* Make `Ctrl + Backspace` delete whole words in terminals
+
+   For bash, which uses readline, add `"\C-H":"\C-W"` to `~/.inputrc` and restart bash. https://askubuntu.com/questions/701824/getting-ctrl-backspace-to-delete-words-in-gnome-terminal-and-vim-insert-mo
+   
+   For zsh, add `bindkey '^H' backward-kill-word`  into `~/.zshrc`. https://unix.stackexchange.com/questions/12787/zsh-kill-ctrl-backspace-ctrl-delete
+  
+   
 * Setup Xmodmap for custom keyboard shortcuts. Use `xev` command to figure out keycodes. ([more](https://unix.stackexchange.com/questions/49650/how-to-get-keycodes-for-xmodmap))
 
    Instructions for setup: https://wiki.archlinux.org/index.php/Xmodmap. Setting keyboard shortcuts is certainly possible in linux but 
