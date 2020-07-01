@@ -22,7 +22,6 @@ Stuff I haven't been able to solve yet:
 
 ## Tips
 
-   
 * Use Ctrl + PgDown and Ctrl + PgUp for changing tabs in apps with keyboard.
 * Lenovo Thinkpad supports Fn + Right Arrow and Fn + Left Arrow for End and Home. Useful to go to the start or end of line. *Unfortunately this didn't work with an external Lenovo keyboard and rebinding Fn at OS level is a bit tough.*
 * Some times copy - pasting stuff to terminal with middle click brings up weidr [200~ chars, see: https://cirw.in/blog/bracketed-paste
@@ -32,6 +31,30 @@ Stuff I haven't been able to solve yet:
 
 ## Configuration
 
+
+* Settings -> Applications, disable notifications for all unnecessary apps.
+* Settings -> Displays -> Night Light tab: Schedule Night light in the evenings. Easier for your eyes.
+* Settings -> Sound. Drag System Sounds volume to zero to disable Gnome UI feedback sounds.
+* Settings -> Power. Configure so that you can leave a script running while on AC and laptop won't automatically shutdown or suspend.
+* Settings -> Keyboard shortcuts
+    * Set alt + w for closing window
+    * Set alt + q as a new command for `xkill`. See https://blog.christophersmart.com/2009/07/29/simple-graphical-kill-in-gnome/#:~:text=Click%20on%20the%20right%20hand,simply%20by%20clicking%20on%20it.
+    
+         *Old habits from macOs..*
+         
+* Open Clocks app, add world clocks for all relevant office locations. These clocks appear in the notification menu when you click top bar clock.
+* Install Gnome Tweaks (appears as "Tweaks" app) to control even more Gnome options
+    * Extensions
+        * Set "overlay a tasteful logo" to disabled
+    * Top bar
+        * Disable Activities Overview Hot Corner
+        * Clock: Weekday and date on
+        * Calendar: Week numbers on
+    * Window Titlebars
+        * Titlebar Buttons, enable minimize and maximize
+    * Workspaces
+        * Set to Static Workspaces -> 2
+        
 * Configure windowing to use X11 instead of new default Wayland: https://docs.fedoraproject.org/en-US/quick-docs/configuring-xorg-as-default-gnome-session/
 
    With Wayland, bluetooth mouse refresh rate was very slow and sluggish.
@@ -42,21 +65,6 @@ Stuff I haven't been able to solve yet:
    
 * Increase max_user_watches https://unix.stackexchange.com/questions/13751/kernel-inotify-watch-limit-reached
 * Use dead keys variant of keyboard for easier markdown backtick writing
-* Open Gnome keyboard shortcuts
-    * Set alt + w for closing window
-    * Set alt + q as a new command for `xkill`. See https://blog.christophersmart.com/2009/07/29/simple-graphical-kill-in-gnome/#:~:text=Click%20on%20the%20right%20hand,simply%20by%20clicking%20on%20it.
-    
-* Install Gnome Tweaks to control fine grained Gnome options
-    * Extensions
-        * Set "overlay a tasteful logo" to disabled
-    * Top bar
-        * Disable Activities Overview Hot Corner
-        * Tune Top bar clock as you wish
-    * Window Titlebars
-        * Titlebar Buttons, enable minimize and maximize
-    * Workspaces
-        * Set to Static Workspaces -> 2
-
 * Make `Ctrl + Backspace` delete whole words in terminals
 
    For bash, which uses readline, add `"\C-H":"\C-W"` to `~/.inputrc` and restart bash. https://askubuntu.com/questions/701824/getting-ctrl-backspace-to-delete-words-in-gnome-terminal-and-vim-insert-mo
