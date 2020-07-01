@@ -135,7 +135,8 @@ My history:
    
 * Use Ctrl + PgDown and Ctrl + PgUp for changing tabs in apps with keyboard
 * Some times copy - pasting stuff to terminal with middle click brings up weidr [200~ chars, see: https://cirw.in/blog/bracketed-paste
-
+* Resize windows with Super + Mouse middle click and drag (Gnome)
+* Move windows with Super + Mouse left click and drag (Gnome)
    
 
 ## Python
