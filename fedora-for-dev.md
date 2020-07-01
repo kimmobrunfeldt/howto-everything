@@ -30,7 +30,7 @@ My history:
     sudo dnf install ffmpeg
     sudo dnf install peek
 
-* sudo dnf install postgresql for psql client
+* `sudo dnf install postgresql` for psql client
 
 * Install Docker
 
@@ -41,11 +41,103 @@ My history:
     1. Docker https://docs.docker.com/engine/install/fedora/
 
     This issue contains useful info about Docker issues with Fedora 32: https://github.com/docker/for-linux/issues/955#issuecomment-620932240
+    
+    Aliases:
+    
+    ```bash
+    alias docker='podman'
+    alias ubuntu='docker run -v $HOME/.ssh:/root/.ssh -v $PWD:/root --security-opt label=disable -w /root --rm -i -t kimmobrunfeldt/ubuntu /bin/bash'
+    ```
+
+* Install [scm_breeze](https://github.com/scmbreeze/scm_breeze) for very useful git shortcuts.
+
+* `sudo dnf install git-cola` for a git UI. I also have it aliased as `cola` (and also `alias stree=git-cola`..)
+   
+      It provides a nice way to stage changes by lines. For all other operations I use CLI.
+      
+* Install [z for jumping](https://github.com/rupa/z). I have it aliased as `j` for jumping to directories
+* `alias open='xdg-open'` Allows you to run `open .` to open file browser, etc.
+* Install VS Code
+
+   My settings:
+   ```js
+   {
+       "window.zoomLevel": 3,
+       "explorer.openEditors.visible": 0,
+       "editor.renderWhitespace": "all",
+       "files.trimTrailingWhitespace": true,
+       "files.trimFinalNewlines": true,
+       "git.decorations.enabled": false,
+       // This option is needed to disable the behavior where Ctrl - X cuts
+       // a line even when there's no selection
+       "editor.emptySelectionClipboard": false,
+       "explorer.confirmDragAndDrop": false,
+       "workbench.editor.enablePreview": false,
+       "workbench.editor.enablePreviewFromQuickOpen": false,
+       "editor.tabSize": 2,
+       "editor.rulers": [
+           80, 120
+       ],
+       "typescript.updateImportsOnFileMove.enabled": "always",
+       "update.showReleaseNotes": false,
+       "editor.acceptSuggestionOnEnter": "off"
+   }
+   ```
+   
+   
+   Keyboard shortcuts:
+   ```js
+   // Place your key bindings in this file to override the defaultsauto[]
+   [
+       {
+           "key": "ctrl+x",
+           "command": "-notebook.cell.cut",
+           "when": "notebookEditorFocused && !inputFocus"
+       },
+       {
+           "key": "ctrl+shift+alt+x",
+           "command": "filesExplorer.cut",
+           "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+       },
+       {
+           "key": "ctrl+x",
+           "command": "-filesExplorer.cut",
+           "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+       },
+       {
+           "key": "ctrl+x",
+           "command": "-editor.action.clipboardCutAction",
+           "when": "textInputFocus && !editorReadonly"
+       },
+       {
+           "key": "ctrl+x",
+           "command": "editor.action.clipboardCutAction"
+       },
+       {
+           "key": "ctrl+shift+l",
+           "command": "editor.action.insertCursorAtEndOfEachLineSelected",
+           "when": "editorTextFocus"
+       },
+       {
+           "key": "shift+alt+i",
+           "command": "-editor.action.insertCursorAtEndOfEachLineSelected",
+           "when": "editorTextFocus"
+       }
+   ]
+   ```
+   
+   Extensions:
+   * GitLens
+   * JSON Tools
+   * MDX
+   * Prettier
+   * Python
+   
+   
 
 ## Python
 
-* sudo dnf install python3-devel.x86_64
+* `sudo dnf install python3-devel.x86_64`
 * Install pipenv for per-project installs instead of global https://docs.python-guide.org/dev/virtualenvs/#installing-pipenv
-
 
 
