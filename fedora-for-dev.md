@@ -9,6 +9,10 @@ My history:
 
 # Configuring Fedora 32 for dev work
 
+* Configure windowing to use X11 instead of new default Wayland: https://docs.fedoraproject.org/en-US/quick-docs/configuring-xorg-as-default-gnome-session/
+
+   With Wayland, bluetooth mouse refresh rate was very slow and sluggish.
+   
 * Increase max_user_watches https://unix.stackexchange.com/questions/13751/kernel-inotify-watch-limit-reached
 * Use dead keys variant of keyboard for easier markdown backtick writing
 * Open Gnome keyboard shortcuts
