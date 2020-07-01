@@ -133,6 +133,8 @@ My history:
    * Prettier
    * Python
    
+* Use Ctrl + PgDown and Ctrl + PgUp for changing tabs in apps with keyboard
+
    
 
 ## Python
