@@ -36,6 +36,28 @@ My history:
 
 * `sudo dnf install postgresql` for psql client
 
+* Setup Xmodmap for custom keyboard shortcuts. Use `xev` command to figure out keycodes. ([more](https://unix.stackexchange.com/questions/49650/how-to-get-keycodes-for-xmodmap))
+
+   Instructions for setup: https://wiki.archlinux.org/index.php/Xmodmap
+   
+   After setup, change keyboard mapping to have similar brace behavior as MacOS has. It is very logical, all needed
+   characters are under keys 8 and 9.
+   
+   * Shift + 8 = `(`
+   * AltGr + 8 = `[`
+   * Shift + AltGr + 8 = `{`
+   
+   
+   ```patch
+   -keycode  17 = 8 parenleft 8 asterisk bracketleft less
+   +keycode  17 = 8 parenleft 8 asterisk bracketleft braceleft
+   -keycode  18 = 9 parenright 9 parenleft bracketright braceright
+   +keycode  18 = 9 parenright 9 parenleft bracketright greater
+   ```
+   
+   then run `xmodmap ~/.Xmodmap` to reload changes. It freezes for a while.
+
+   
 * Install Docker
 
     **Options are:**
