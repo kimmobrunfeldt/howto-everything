@@ -102,6 +102,8 @@ Stuff I haven't been able to solve yet:
    4. Connect your headphones
    
    5. Choose High Fidelity Playback (A2DP sink)-mode in sound options
+   
+   6. Configure autoswitching to bluetooth audio output on connection: https://askubuntu.com/questions/589885/automatically-switch-sound-output-device-to-bluetooth-headset-force-to-a2dp-pr
 
 
 
