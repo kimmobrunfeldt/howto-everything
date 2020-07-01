@@ -14,9 +14,8 @@ Some tips may be meant only for Thinkpads or even the specific model T490.*
 
 ## TODO
 
-Stuff I haven't been able to solve yet:
+Stuff I haven't looked into yet:
 
-* Bose QC35 bluetooth for music. Bluetooth connects but music channel doesn't work. More at https://unix.stackexchange.com/questions/292189/pairing-bose-qc-35-over-bluetooth-on-fedora (the first suggestions didn't help)
 * Mouse cursor or the whole desktop sometimes freezes (process priority issue?). More at https://stackoverflow.com/questions/392198/how-to-make-linux-gui-usable-when-lots-of-disk-activity-is-happening
 * Battery life optimisations. Not really a concern at the moment. More at https://medium.com/@amanusk/an-extensive-guide-to-optimizing-a-linux-laptop-for-battery-life-and-performance-27a7d853856c
 
