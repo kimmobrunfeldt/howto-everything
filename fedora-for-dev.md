@@ -173,6 +173,11 @@ My history:
    
    
    Keyboard shortcuts:
+   
+   * Ctrl + Shift + L = add cursors to end of each selected line
+   * Ctrl + X bindings might be useless, as I tried to get rid of Ctrl + X removing line without selection. I'm used to it only working as a clipboard shortcut.
+   
+   
    ```js
    // Place your key bindings in this file to override the defaultsauto[]
    [
