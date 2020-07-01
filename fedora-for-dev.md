@@ -28,7 +28,10 @@ My history:
 
    With Wayland, bluetooth mouse refresh rate was very slow and sluggish.
    
-* `alias open='xdg-open'` Allows you to run `open .` to open file browser, etc.
+* `alias open='xdg-open'` Allows you to run `open .` in terminal to open file browser, and other files with defined protocol handlers.
+
+   For example `open $DATABASE_URL`
+   
 * Increase max_user_watches https://unix.stackexchange.com/questions/13751/kernel-inotify-watch-limit-reached
 * Use dead keys variant of keyboard for easier markdown backtick writing
 * Open Gnome keyboard shortcuts
@@ -87,7 +90,6 @@ My history:
    Type=Application
    ```
    
-   
    More references:
    
    * https://medium.com/@damko/a-simple-humble-but-comprehensive-guide-to-xkb-for-linux-6f1ad5e13450
@@ -98,10 +100,15 @@ My history:
 
 * Install [Peek](https://github.com/phw/peek) for sharing quick interactions to Slack or PRs
 
+    ```
     sudo dnf install ffmpeg
     sudo dnf install peek
+    ```
 
-* `sudo dnf install postgresql` for psql client
+* Install Postgres client 
+
+   `sudo dnf install postgresql`
+   
 * Install Docker
 
     **Options are:**
@@ -121,10 +128,21 @@ My history:
 
 * Install [scm_breeze](https://github.com/scmbreeze/scm_breeze) for very useful git shortcuts.
 
-* `sudo dnf install git-cola` for a git UI. I also have it aliased as `cola` (and also `alias stree=git-cola`..)
+* Install [Git Cola](https://git-cola.github.io/) for git UI.
    
-      It provides a nice way to stage changes by lines. For all other operations I use CLI.
+      ```
+      sudo dnf install git-cola
+      ```
       
+      It provides a nice way to stage changes by lines. For all other operations I use CLI.
+      Git Cola was the best alternative for Sourcetree in my simple use case.
+      Also add aliases
+      
+      ```bash
+      alias cola='git-cola'
+      alias stree='git-cola'  # old habits.. don't do this
+      ```
+  
 * Install [z for jumping](https://github.com/rupa/z). I have it aliased as `j` for jumping to directories
 * Install VS Code
 
