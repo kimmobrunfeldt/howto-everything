@@ -17,7 +17,7 @@ Some tips may be meant only for Thinkpads or even the specific model T490.*
 
    
 * Use Ctrl + PgDown and Ctrl + PgUp for changing tabs in apps with keyboard.
-* Lenovo Thinkpad supports Fn + Right Arrow and Fn + Left Arrow for End and Home. Useful to go to the start or end of line.
+* Lenovo Thinkpad supports Fn + Right Arrow and Fn + Left Arrow for End and Home. Useful to go to the start or end of line. *Unfortunately this didn't work with an external Lenovo keyboard and rebinding Fn at OS level is a bit tough.*
 * Some times copy - pasting stuff to terminal with middle click brings up weidr [200~ chars, see: https://cirw.in/blog/bracketed-paste
 * Resize windows with Super + Mouse middle click and drag (Gnome)
 * Move windows with Super + Mouse left click and drag (Gnome)
