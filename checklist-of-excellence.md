@@ -1,4 +1,4 @@
-# Are you doing it wrong?
+# Checklist of Excellence
 
 This was inspired by
 
@@ -7,7 +7,7 @@ This was inspired by
 
 ### My random list
 
-If you can check everything on this list, congratulations, you are doing it right!
+If you can check everything on this list, congratulations, you are doing excellent!
 
 - [ ] **Do you have a documentation which tells exactly what your product is?**
 
