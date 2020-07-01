@@ -9,7 +9,8 @@ My history:
 
 # Configuring Fedora 32 for dev work
 
-*This a personal setup, not all settings might work for you. Read the document through and pick up the good parts to your preferences.*
+*This a personal setup, not all settings might work for you. Read the document through and pick up the good parts to your preferences. 
+Some tips may be meant only for Thinkpads or even the specific model T490.*
 
 
 ## Tips
