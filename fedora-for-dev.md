@@ -21,7 +21,7 @@ Stuff I haven't looked into yet:
 * Mouse cursor or the whole desktop sometimes freezes (process priority issue?). More at https://stackoverflow.com/questions/392198/how-to-make-linux-gui-usable-when-lots-of-disk-activity-is-happening
 * Lenovo Thinkpad supports Fn + Right Arrow and Fn + Left Arrow for End and Home, but the external Lenovo Thinkpad keyboard doesn't. Keymapping Fn doesn't seem to be possible at OS level. On the otherhand someone has found a way to turn Fn Lock on/off at OS level: https://github.com/lentinj/tp-compact-keyboard. 
 
-   The external one seems to be especially tricky.
+   The external Thinkpad keyboard seems to be tricky: https://superuser.com/questions/1307167/how-to-swap-control-and-function-key-on-lenovo-external-keyboard
    
 * Battery life optimisations. Not really a concern at the moment. More at https://medium.com/@amanusk/an-extensive-guide-to-optimizing-a-linux-laptop-for-battery-life-and-performance-27a7d853856c
 
