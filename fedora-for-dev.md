@@ -108,7 +108,9 @@ Stuff I haven't looked into yet:
    
    6. Configure autoswitching to bluetooth audio output on connection: https://askubuntu.com/questions/589885/automatically-switch-sound-output-device-to-bluetooth-headset-force-to-a2dp-pr
 
+* Terminal
 
+   * Configure `Ctrl + N` as a shortcut for opening a new window
 
 * Configure windowing to use X11 instead of new default Wayland: https://docs.fedoraproject.org/en-US/quick-docs/configuring-xorg-as-default-gnome-session/
 
