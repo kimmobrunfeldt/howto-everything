@@ -308,6 +308,11 @@ Stuff I haven't looked into yet:
    * MDX
    * Prettier
    * Python
+   
+### Node
+
+* Install nvm https://github.com/nvm-sh/nvm
+* `nvm install <latest-LTS>`
 
 ### Python
 
