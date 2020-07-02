@@ -12,6 +12,8 @@ My history:
 *This a personal setup, not all settings might work for you. Read the document through and pick up the good parts to your preferences. 
 Some tips may be meant only for Thinkpads or even the specific model T490.*
 
+Many of these tips or configs are for Gnome and X11, and should work with Ubuntu as well.
+
 ## TODO
 
 Stuff I haven't looked into yet:
@@ -25,6 +27,7 @@ Stuff I haven't looked into yet:
 
 ## Tips
 
+* Use `Super + Left` and other arrow keys to resize windows half-screen, full screen etc.
 * Use Ctrl + PgDown and Ctrl + PgUp for changing tabs in apps with keyboard.
 * Lenovo Thinkpad supports Fn + Right Arrow and Fn + Left Arrow for End and Home. Useful to go to the start or end of line. *Unfortunately this didn't work with an external Lenovo keyboard and rebinding Fn at OS level is a bit tough.*
 * Some times copy - pasting stuff to terminal with middle click brings up weidr [200~ chars, see: https://cirw.in/blog/bracketed-paste
