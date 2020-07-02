@@ -121,7 +121,8 @@ Stuff I haven't looked into yet:
    For bash, which uses readline, add `"\C-H":"\C-W"` to `~/.inputrc` and restart bash. https://askubuntu.com/questions/701824/getting-ctrl-backspace-to-delete-words-in-gnome-terminal-and-vim-insert-mo
    
    For zsh, add `bindkey '^H' backward-kill-word`  into `~/.zshrc`. https://unix.stackexchange.com/questions/12787/zsh-kill-ctrl-backspace-ctrl-delete
-  
+
+* Get Fn lock working with external Thinkpad keyboard: https://askubuntu.com/questions/889026/thinkpad-external-keyboard-fn-ctrl-switch
    
 * Setup Xmodmap for custom keyboard shortcuts. Use `xev` command to figure out keycodes. ([more](https://unix.stackexchange.com/questions/49650/how-to-get-keycodes-for-xmodmap))
 
