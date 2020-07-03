@@ -320,3 +320,63 @@ Stuff I haven't looked into yet:
 * Install pipenv for per-project installs instead of global https://docs.python-guide.org/dev/virtualenvs/#installing-pipenv
 
 
+## Fn Lock with external Lenovo keyboard
+
+Fn Lock didn't work in the external USB Lenovo keyboard, but there's an OS level way to toggle the switch. 
+With this setup you can have a `fnlock` command available which will toggle it.
+
+Into file `/usr/local/sbin/fnlock` write:
+
+```bash
+#!/bin/sh
+#
+# Usage: fnlock
+# Toggles Fn Lock for Thinkpad keyboards
+#  0: Fn Lock on
+#  1: Fn Lock off
+
+thinkpad_kb_glob='*17EF\:604*'
+
+# Take the first device to check current fn lock value
+# Doing it this way ensures that after 2 executions
+# all devices are in sync.
+
+paths=()
+for device in $(find /sys/bus/hid/devices -name "$thinkpad_kb_glob"); do
+  fnlock_path="$device/fn_lock"
+  if [[ -f "$fnlock_path" ]]; then
+    paths+=( $fnlock_path )
+  fi
+done
+
+
+if [[ "${#paths[@]}" -eq 0 ]]; then
+  echo "No matching devices found"
+  exit 1
+fi
+
+current_val=$(cat ${paths[0]} | sed 's/ *$//')
+
+if [[ "$current_val" -eq 0 ]]; then
+  new_val="1"
+else
+  new_val="0"
+fi
+
+
+for fnlock_path in ${paths[@]}; do
+  echo $new_val > $fnlock_path
+done
+
+if [[ "$new_val" -eq 0 ]]; then echo "Fn Lock ON"; else echo "Fn Lock OFF"; fi
+```
+
+then add a way to execute this script without writing a password for sudo. Run `sudo visudo` and add:
+
+```
+ALL ALL=NOPASSWD: /usr/local/sbin/fnlock
+```
+
+then add an alias `alias fnlock='sudo fnlock'` to bind it automatically to sudo usage.
+
+After that you can just type `fnlock` in terminal to switch the toggle. Enjoy!
