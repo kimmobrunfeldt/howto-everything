@@ -41,6 +41,22 @@ If you really need to do implicit boolean conversion, please use `Boolean(value)
 ways of doing implicit conversions if possible.
 
 
+## Why use _.isX functions from LoDash / other utility lib
+
+It may seem like a simple thing. Why not just code it yourself? I think it's more complex than it sounds at first. 
+There's a baggage of history with JS, and a lot of different engines and versions running the code. This has lead to a situation
+where doing simple type checks are not that trivial. In some cases they require deep knowledge of how different JS engines work. Just see the StackOverflow threads, in many cases the universally working solution is not the first answer or trivial:
+
+* https://stackoverflow.com/questions/28814585/how-to-check-if-type-is-boolean
+* https://stackoverflow.com/questions/767486/how-do-you-check-if-a-variable-is-an-array-in-javascript
+* https://stackoverflow.com/questions/8511281/check-if-a-value-is-an-object-in-javascript ({} vs other objects)
+* https://stackoverflow.com/questions/4059147/check-if-a-variable-is-a-string-in-javascript
+
+   > Since 580+ people have voted for an incorrect answer, and 800+ have voted for a working but shotgun-style answer, I thought it might be worth redoing my answer in a simpler form that everybody can understand.
+
+* https://stackoverflow.com/questions/6449611/check-whether-a-value-is-a-number-in-javascript-or-jquery
+
+
 ## Every Number is a floating point number
 
 Yes.
