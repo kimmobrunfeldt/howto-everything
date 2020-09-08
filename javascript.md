@@ -56,6 +56,8 @@ where doing simple type checks are not that trivial. In some cases they require 
 
 * https://stackoverflow.com/questions/6449611/check-whether-a-value-is-a-number-in-javascript-or-jquery
 
+I'll rather use `_.isNumber` and other helpers, so that this knowledge is isolated in a single module, instead of scattered around my code bases
+and possibly getting outdated if engines change.
 
 ## Every Number is a floating point number
 
