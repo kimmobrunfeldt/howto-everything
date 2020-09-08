@@ -16,7 +16,7 @@ These rules are somewhat simple, but might surprise in many cases. Examples:
 * `!![]` -> `true` *(even though empty)*
 * `!!{}` -> `true`
 * `!!""` -> `false` *(the string is empty but still falsy, vs array and object)*
-* `!!"something" -> `true`
+* `!!"something"` -> `true`
 
 The implicit boolean conversion is probably commonly used because JS doesn't have statically analyzed types, and using `!!` kind of works even when
 the type of the value is changed. I'd guess the most common use is to guard against `undefined`, which could be done more explicitly. 
