@@ -1,6 +1,6 @@
 # Bookmarklet to easily generate branch name from JIRA ticket
 
-Thanks to [@jareware](https://github.com/jareware) the code, I made small modifications to the script.
+Credits to [@jareware](https://github.com/jareware) for the original code, I made small modifications to the script.
 
 
 ## Installation
