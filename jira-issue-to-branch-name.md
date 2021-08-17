@@ -17,8 +17,7 @@ Paste the following code in [Bookmarkleter](https://chriszarate.github.io/bookma
   const title = h1[0].innerText.toLowerCase()
     .replace(/[^a-z]+/g, '-')
     .replace(/(^-|-$)/g, '')
-  const branchName = key.toLowerCase() + '-' + title;
-
+  const branchName = key.toLowerCase() + '-' + title.split('-').slice(0, 5).join('-');
   navigator.clipboard.writeText(branchName).then(() => {
     alert('Copied to clipboard: ' + branchName);
   }).catch((err) => {
