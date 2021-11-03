@@ -16,3 +16,6 @@ sudo mv /tmp/com.apple.HIToolbox.plist /Library/Preferences/com.apple.HIToolbox.
 ``` 
 
 It seems that input sources are a bit different in the login screens, especially the one that's coming up first when disk encryption is enabled. 
+
+
+Other research: https://github.com/ergosteur/cf-keylayout/issues/26#issue-890510914
