@@ -75,3 +75,26 @@ type ValidCssClassName<UnvalidatedInput extends string, Validated extends string
       // already fail to "Type 'null' does not satisfy the constraint 'string'"
       : never
 ```
+
+
+
+### JEst mock types
+
+```typescript
+/*
+ * Utility to allow typing a single jest Mock function better.
+ * If you for example mock logger like this:
+ *
+ *   jest.spyOn(logger, 'warn').mockImplementation(() => undefined)
+ *
+ * You can later on access logger.warn with correct types using this utility:
+ *
+ *   (logger.warn as MockFunction<typeof logger.warn>).mock.calls[0]
+ *
+ * and typescript is able to understand that the jest mock properties exist.
+ */
+export type MockFunction<T extends (...args: any) => any> = jest.Mock<
+  ReturnType<T>,
+  Parameters<T>
+>
+```
