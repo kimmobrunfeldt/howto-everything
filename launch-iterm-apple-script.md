@@ -28,3 +28,58 @@ Use instructions from [this stackexchange answer](http://apple.stackexchange.com
             end tell
         end tell
     end tell
+
+
+#### Complete example 
+
+Starts a docker container, backend, frontend, and finally opens VSCode for both projects.
+
+
+```
+tell application "iTerm"
+	set newWindow to (create window with default profile)
+	tell current session of newWindow
+		write text "cd ~/code/backend/db; docker-compose up"
+	end tell
+end tell
+
+tell application "iTerm"
+	set newWindow to (create window with default profile)
+	tell current session of newWindow
+		write text "cd ~/code/backend; git status"
+	end tell
+end tell
+
+delay 1
+
+tell application "iTerm"
+	set newWindow to (create window with default profile)
+	tell current session of newWindow
+		write text "cd ~/code/backend; npm run start"
+	end tell
+end tell
+
+tell application "iTerm"
+	set newWindow to (create window with default profile)
+	tell current session of newWindow
+		write text "cd ~/code/frontend; npm start"
+	end tell
+end tell
+
+delay 3
+
+tell application "iTerm"
+	set newWindow to (create window with default profile)
+	tell current session of newWindow
+		write text "cd ~/code/backend; npm run workers"
+	end tell
+end tell
+
+
+tell application "iTerm"
+	set newWindow to (create window with default profile)
+	tell current session of newWindow
+		write text "cd ~/code/backend; code . ; cd ~/code/frontend; code .; git status"
+	end tell
+end tell
+```
