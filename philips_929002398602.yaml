@@ -294,10 +294,10 @@ variables:
   # mapping between actions and integrations
   actions_mapping:
     zha:
-      button_on_short: [on_press, on_press_release]
+      button_on_short: [on_press]
       button_on_long: [on_hold]
       button_on_release: [on_long_release]
-      button_off_short: [off_press, off_press_release]
+      button_off_short: [off_press]
       button_off_long: [off_hold]
       button_off_release: [off_long_release]
       button_up_short: [up_press]
@@ -307,10 +307,10 @@ variables:
       button_down_long: [down_hold]
       button_down_release: [down_long_release]
     zigbee2mqtt:
-      button_on_short: [on_press, on_press_release]
+      button_on_short: [on_press]
       button_on_long: [on_hold]
       button_on_release: [on_hold_release]
-      button_off_short: [off_press, off_press_release]
+      button_off_short: [off_press]
       button_off_long: [off_hold]
       button_off_release: [off_hold_release]
       button_up_short: [up_press]
