@@ -15,8 +15,7 @@ import { sql, SqlFragment } from 'slonik'
 // The lock identifier patterns need to be unique across the app.
 // Having all defined in one place helps to spot potential overlap.
 export const lockKeyCreators = {
-  githubTeamSync: (orgId: string, installationId: string) =>
-    `githubTeamSync/${orgId}/${installationId}`,
+  someOperation: (key: string) => `someOperation/${key}/`
 }
 
 export class ExclusiveAdvisoryLockAcquireError extends Error {}
