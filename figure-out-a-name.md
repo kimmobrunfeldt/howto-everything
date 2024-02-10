@@ -4,7 +4,7 @@ Figure out a name for business, project, app, site, etc.
 
 **List of helpful sites:**
 
-
+* https://nameming.com/ Generating names best alternative for namemesh
 * https://namelix.com/ Generating names
 * http://www.panabee.com/ Generating names
 * https://www.namemesh.com/ Generating names
